@@ -1,4 +1,4 @@
-# political_sentiment_analysis
+# political_ideology_detection
 
 Michigan State University
 
