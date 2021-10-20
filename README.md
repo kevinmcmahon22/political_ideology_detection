@@ -22,6 +22,25 @@ Some potential methods we will use include RNN/LSTM with Attention, Transformer,
 
 ### Datasets
 
-Reddit https://github.com/jreynolds999/NLP-Reddit-Classification
-IBC https://people.cs.umass.edu/~miyyer/ibc/index.html - NOTE: need to send email in order to access dataset
+Below is a sample of datasets that could be used in our experiments
 
+#### Reddit
+
+https://github.com/jreynolds999/NLP-Reddit-Classification
+
+1800 sentences labeled as taken from r/Democrats or r/Republicans
+
+#### IBC
+
+[Ideological Books Corpus](https://people.cs.umass.edu/~miyyer/ibc/index.html) has 4062 sentences labeled as conservative, liberal, or neutral
+
+NOTE: need to send email in order to access dataset
+
+### congressional
+
+https://github.com/jakemsnyder/political-ideology-detection
+
+A random sample of sentences from the [Congressional Record](https://www.congress.gov/congressional-record) labeled using float in range [-1, 1] that represents
+political ideology of speaker. Sentences are also labeled with useful metadata including year, session of congress, speaker, and spoken in HoR or Senate
+
+Ideology score example: 1 is most conservative member of congress, while -0.235 represents someone who is a more liberal member of congress
