@@ -1,4 +1,3 @@
-import re
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -6,19 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-
-REPLACE_BY_SPACE_RE = re.compile('[/(){}\[\]\|@,;]')
-BAD_SYMBOLS_RE = re.compile('[^0-9a-z #+_]')
-def clean_text(text):
- 
-    text = text.lower()
-    text = REPLACE_BY_SPACE_RE.sub(' ', text) 
-    text = BAD_SYMBOLS_RE.sub('', text)
-    text = ' '.join(word for word in text.split()) 
-    return text
     
-data.to_csv('convote_df')
-
 
 convote_data['text'] = convote_data['text'].apply(clean_text)
 X = convote_data.text
