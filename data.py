@@ -13,7 +13,7 @@ def clean_text(text):
     text = ' '.join(word for word in text.split())
     return text
 
-def create_df(filenames):
+def create_df_convote(filenames):
     items = []
     for file_path in tqdm(filenames):
         fp = open(file_path, encoding='utf8')
@@ -47,8 +47,8 @@ def create_df(filenames):
 filenames_train = glob.glob('data/convote_v1.1/data_stage_one/training_set/*.txt')
 filenames_test = glob.glob('data/convote_v1.1/data_stage_one/test_set/*.txt')
 
-df_train = create_df(filenames_train)
-df_test = create_df(filenames_test)
+df_train = create_df_convote(filenames_train)
+df_test = create_df_convote(filenames_test)
 
-df_train.to_csv('df_train')
-df_test.to_csv('df_test')
+df_train.to_csv('df_convote_train')
+df_test.to_csv('df_convote_test')

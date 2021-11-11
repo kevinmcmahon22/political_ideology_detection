@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-    
+
 
 convote_data['text'] = convote_data['text'].apply(clean_text)
 X = convote_data.text
