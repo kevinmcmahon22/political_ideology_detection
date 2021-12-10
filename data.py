@@ -48,7 +48,7 @@ def create_df_convote(filenames):
     
     # convert list to df
     new_df = pd.DataFrame(items)
-    return new_df.rename(index=str, columns={0: 'text', 1: 'bill_debate_number', 2: 'political_party', 3: 'mentioned_bill', 4: 'voted_yes'})
+    return new_df.rename(index=str, columns={0: 'sentence', 1: 'bill_debate_number', 2: 'labels', 3: 'mentioned_bill', 4: 'voted_yes'})
 
 # main
 filenames_train = glob.glob('data/convote_v1.1/data_stage_one/training_set/*.txt')
